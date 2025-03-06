@@ -58,3 +58,17 @@ spec:
   parent: ops
   children: [backstage, other]
   members: [jdoe]
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage
+  description: backstage.io
+  annotations:
+    github.com/project-slug: 'backstage/backstage'
+spec:
+  type: website
+  lifecycle: production
+  owner: user:guest
