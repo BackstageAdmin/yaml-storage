@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: yaml-storage
+  annotations:
+    github.com/project-slug: BackstageAdmin/yaml-storage
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
