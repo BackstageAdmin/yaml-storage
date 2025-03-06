@@ -1,0 +1,33 @@
+apiVersion: pt.fn.crossplane.io/v1beta1
+kind: Resources
+resources:
+- name: my-first-vpc
+  base:
+    apiVersion: ec2.aws.upbound.io/v1beta1
+    kind: VPC
+    metadata:
+      labels:
+        type: backend
+    spec:
+      forProvider:
+      # Removed for brevity
+- name: my-second-vpc
+  base:
+    apiVersion: ec2.aws.upbound.io/v1beta1
+    kind: VPC
+    metadata:
+      labels:
+        type: internet
+    spec:
+      forProvider:
+      # Removed for brevity
+- name: my-gateway
+  base:
+    apiVersion: ec2.aws.upbound.io/v1beta1
+    kind: InternetGateway
+    spec:
+      forProvider:
+        vpcIdSelector:
+          matchControllerRef: true
+          matchLabels:
+            type: internet
