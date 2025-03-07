@@ -39,8 +39,7 @@ metadata:
     name: a-python-library-with-argo
     description: A Python Library
     annotations:
-        backstage.io/techdocs-ref: dir:.
-        github.com/project-slug: pep8speaks-org/pep8speaks
+        backstage.io/techdocs-ref: dir:
         argocd/app-name: argocd
     tags:
         - python
